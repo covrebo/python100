@@ -20,7 +20,7 @@ days_until_christmas = (today_date - christmas).days
 
 # Calculating the days until EOL
 asset_lifespan = timedelta(days=1825)
-print(str(asset_lifespan))
+print(str(asset_lifespan)) # DEBUG
 asset_purchase_date = date(2018, 7, 1)
 asset_eol = asset_purchase_date + asset_lifespan
 print(f'This asset will reach end of life on {str(asset_eol)}')
