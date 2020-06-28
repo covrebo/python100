@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-from logtimes import loglines, convert_to_datetime, time_between_shutdowns
+from day_2 import loglines, convert_to_datetime, time_between_shutdowns
 
 
 def test_convert_to_datetime():
