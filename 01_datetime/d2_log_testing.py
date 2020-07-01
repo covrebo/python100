@@ -27,7 +27,7 @@ with open(logfile) as f:
 #     datetime_list.append(loglines_split[1][17:19])
 #     print(line)
 #     print(loglines_split)
-#     # return datetime(int(datetime_list[0]), int(datetime_list[1]), int(datetime_list[2]),
+#     # return 01_datetime(int(datetime_list[0]), int(datetime_list[1]), int(datetime_list[2]),
 #     #          int(datetime_list[3]), int(datetime_list[4]), int(datetime_list[5]))
 
 # For problem 2
@@ -50,17 +50,17 @@ print(shutdown_events)
 print(shutdown_events[1] - shutdown_events[0])
     # print(line)
     # print(loglines_split[3])
-    # return datetime(int(datetime_list[0]), int(datetime_list[1]), int(datetime_list[2]),
-    #          int(datetime
+    # return 01_datetime(int(datetime_list[0]), int(datetime_list[1]), int(datetime_list[2]),
+    #          int(01_datetime
 # for you to code:
 
 # def convert_to_datetime(line):
 #     """TODO 1:
-#        Extract timestamp from logline and convert it to a datetime object.
+#        Extract timestamp from logline and convert it to a 01_datetime object.
 #        For example calling the function with:
 #        INFO 2014-07-03T23:27:51 supybot Shutdown complete.
 #        returns:
-#        datetime(2014, 7, 3, 23, 27, 51)
+#        01_datetime(2014, 7, 3, 23, 27, 51)
 #     """
 #     pass
 #
@@ -69,6 +69,6 @@ print(shutdown_events[1] - shutdown_events[0])
 #     """TODO 2:
 #        Extract shutdown events ("Shutdown initiated") from loglines and
 #        calculate the timedelta between the first and last one.
-#        Return this datetime.timedelta object.
+#        Return this 01_datetime.timedelta object.
 #     """
 #     pass
