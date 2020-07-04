@@ -1,6 +1,5 @@
-from collections import defaultdict, namedtuple, Counter, deque
+from collections import defaultdict, namedtuple, Counter
 import csv
-import random
 from urllib.request import urlretrieve
 
 movie_data = 'https://raw.githubusercontent.com/pybites/challenges/solutions/13/movie_metadata.csv'
