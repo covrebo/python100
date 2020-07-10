@@ -1,3 +1,5 @@
+from actors import Creature, Wizard, Dragon
+import random
 
 
 def main():
@@ -6,35 +8,46 @@ def main():
 
 
 def print_header():
-    print_header('-' * 40)
-    print_header(' ' * 15 + 'WIZARD GAME')
-    print_header('-' * 40)
+    print('-' * 40)
+    print(' ' * 15 + 'WIZARD GAME')
+    print('-' * 40)
     print()
 
 
 def game_loop():
     creatures = [
-        # TODO: add some creatures
+        Creature('Bat', 5),
+        Creature('Toad', 1),
+        Creature('Tiger', 12),
+        Dragon('Black Dragon', 50, scaliness=2, breathes_fire=False),
+        Wizard('Evil Wizard', 1000),
     ]
 
-    hero = None  # TODO: create our hero
+    print(creatures)
+
+    hero = Wizard("Griswold", 75)
 
     while True:
 
         # randomly choose a creature
+        active_creature = random.choice(creatures)
 
-        print(f'A {...} of level {...} has appeared from a dark and foggy forest...')
+        print(f'A {active_creature.name} of level {active_creature.level} has appeared from a dark and foggy forest...')
         print()
 
         cmd = input('Do you [a]ttack, [r]unaway, or [l]ook around? ')
         if cmd == 'a':
-            # TODO: attack
-            pass
+            if hero.attack(active_creature):
+                creatures.remove(active_creature)
+                print(f"The wizard, {hero.name}, defeated {active_creature.name}!")
+            else:
+                print('The wizard has been dealt a defeat.')
         elif cmd == 'r':
             print('The wizard has become unsure of his powers and flees!!!')
         elif cmd == 'l':
             print(f'The wizard {hero.name} takes in the surroundings and sees:')
-            # TODO: show the creatures in the room
+            for creature in creatures:
+                print(f' * {creature.name} of level {creature.level}')
         else:
             print('OK, exiting game... bye!')
             break
@@ -44,3 +57,6 @@ def game_loop():
             break
 
         print()
+
+if __name__ == '__main__':
+    main()
