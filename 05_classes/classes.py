@@ -15,9 +15,9 @@ class Roll:
         self.defeated_by = defeated_by
 
     def can_defeat(self, roll):
-        if roll == self.cn_defeat:
-            return 'Lose'
-        elif roll == self.defeated_by:
+        if roll.name == self.cn_defeat:
             return 'Win'
+        elif roll.name == self.defeated_by:
+            return 'Lose'
         else:
             return 'Tie'
