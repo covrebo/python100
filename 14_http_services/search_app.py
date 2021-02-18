@@ -29,7 +29,7 @@ def main():
             episode = int(episode)
             found = 0
             for r in result:
-                if r.id == episode:
+                if r.id == episode and r.category == 'Episode':
                     # open a webpage of the episode
                     webbrowser.open(f"https://talkpython.fm{r.url}", new=2)
                     found = 1
